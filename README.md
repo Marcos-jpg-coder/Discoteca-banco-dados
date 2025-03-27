@@ -22,7 +22,7 @@ Projeto de banco de dados para gerenciar acervo de discos, artistas, músicas e 
 
 ## 📚 Documentação
 - **Modelo Conceitual**: [MER.md](docs/MER.md)
-- **DER Visual**: ![DER](docs/DER.png)
+- **DER Visual**: ![DER] 
 - **Scripts SQL**: 
   - [Modelo Lógico](scripts/01_modelo_logico.sql)
   - [Banco Físico](scripts/02_modelo_fisico.sql)
