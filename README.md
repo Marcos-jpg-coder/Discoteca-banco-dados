@@ -15,7 +15,7 @@ Projeto de banco de dados para gerenciar acervo de discos, artistas, músicas e 
 
 ## 🛠 Tecnologias Usadas
 <p align="left">
-  <img src="https://pngimg.com/d/mysql_PNG23.png" width="100" title="MySQL">
+  <img src="https://e-tinet.com/wp-content/uploads/2018/10/MySQL-banco-de-dados-linux-1024x512.png" width="100" title="MySQL">
   <img src="https://franciscochaves.com.br/assets/img/blog/2020/01/logo-tux-brmodelo.png" width="100" title="BrModelo">
   <img src="https://portal.fiero.org.br/storage/noticia/vg3k6ntgebURHbSsvwlaPt9qy8UvSvqfIeOnod2C.png" width="100" title="SENAI">
 </p>
