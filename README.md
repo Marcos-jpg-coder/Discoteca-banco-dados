@@ -34,3 +34,12 @@ Projeto de banco de dados para gerenciar acervo de discos, artistas, músicas e 
 3. Consulte os dados com:
    ```sql
    SELECT * FROM Disco WHERE id_genero = 1; -- Todos os discos de Rock
+
+📞 Contato
+Nome: Marcos Vinicius da Cunha Rocha
+
+Email: marcosviniciusdacunharocha6@gmail.com
+
+LinkedIn: linkedin.com/Marcos-Vinicius da Cunha Rocha
+
+Whatsapp: 61 99116-1843
