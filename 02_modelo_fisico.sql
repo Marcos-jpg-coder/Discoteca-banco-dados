@@ -3,6 +3,61 @@ COLLATE utf8mb4_general_ci CHARSET utf8mb4;
 
 
 	use db_discoteca;
+    
+    -- Tabelas independentes
+CREATE TABLE Gravadora (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Tipo_Artista (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(20) NOT NULL UNIQUE  -- "Solo", "Banda", "Dupla", "Concerto"
+);
+
+CREATE TABLE Genero (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL UNIQUE  -- "Rock", "Pop", etc.
+);
+
+-- Tabelas dependentes
+CREATE TABLE Artista (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_tipo_artista INT NOT NULL,
+    data_nascimento DATE NULL,
+    FOREIGN KEY (id_tipo_artista) REFERENCES Tipo_Artista(id),
+    CHECK (
+        (SELECT nome FROM Tipo_Artista WHERE id = id_tipo_artista) = 'Solo' 
+        AND data_nascimento IS NOT NULL
+        OR
+        (SELECT nome FROM Tipo_Artista WHERE id = id_tipo_artista) != 'Solo' 
+        AND data_nascimento IS NULL
+    )
+);
+
+CREATE TABLE Disco (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    duracao TIME NOT NULL,
+    ano_lancamento INT NOT NULL,
+    id_genero INT NOT NULL,
+    id_artista INT NOT NULL,
+    id_gravadora INT NOT NULL,
+    FOREIGN KEY (id_genero) REFERENCES Genero(id),
+    FOREIGN KEY (id_artista) REFERENCES Artista(id),
+    FOREIGN KEY (id_gravadora) REFERENCES Gravadora(id),
+    CHECK (ano_lancamento BETWEEN 1900 AND YEAR(CURRENT_DATE))
+);
+
+CREATE TABLE Musica (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    duracao TIME NOT NULL,
+    id_disco INT NOT NULL,
+    FOREIGN KEY (id_disco) REFERENCES Disco(id) ON DELETE CASCADE,
+    CHECK (TIME_TO_SEC(duracao) > 0)
+);
 -- Inserção de Gravadoras (5 distintas)
 INSERT INTO Gravadora (id, nome) VALUES
 (1, 'Sony Music'),
@@ -232,3 +287,7 @@ ALTER TABLE Genero AUTO_INCREMENT = 11;
 ALTER TABLE Artista AUTO_INCREMENT = 31;
 ALTER TABLE Disco AUTO_INCREMENT = 51;
 ALTER TABLE Musica AUTO_INCREMENT = 351; -- Considerando que inserimos até a música 350
+
+
+
+SHOW TABLES;
