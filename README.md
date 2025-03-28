@@ -1,5 +1,11 @@
 # Discoteca-banco-dados
 🎶 Discoteca DB  Sistema de catalogação musical com:  ✅ 50 discos (10/gravadora)  ✅ 30 artistas (solo/banda/dupla)  ✅ 7-10 músicas/disco  🛠 MySQL + BrModelo  Desenvolvido no SENAI.
+OBS: se o código não funcionar é porque está muito extenso, tendo que repartir em três diferentes arquivos ou no SQL EM CINCO PARTES:
+Parte 1: Criação do Banco e Estrutura Básica
+Parte 2: Tabelas Dependentes com Constraints Simples
+Parte 3: Inserção de Dados Básicos
+Parte 4: Inserção de Artistas
+Parte 5: Triggers para Validação
 
 
 # 🎶 Sistema de Catalogação de Discoteca
