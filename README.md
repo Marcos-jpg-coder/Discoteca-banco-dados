@@ -46,6 +46,6 @@ Nome: Marcos Vinicius da Cunha Rocha
 
 Email: marcosviniciusdacunharocha6@gmail.com
 
-LinkedIn: linkedin.com/Marcos-Vinicius da Cunha Rocha
+LinkedIn: https://www.linkedin.com/in/marcos-vinicius-9b34382b9/
 
 Whatsapp: 61 99116-1843
